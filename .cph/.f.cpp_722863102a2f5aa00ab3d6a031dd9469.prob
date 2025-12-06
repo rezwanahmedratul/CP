@@ -1,0 +1,1 @@
+{"name":"Local: f","url":"/home/ratul/VS Code/f.cpp","tests":[{"id":1763202785764,"input":"1\n4\n0101","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ratul/VS Code/f.cpp","group":"local","local":true}
