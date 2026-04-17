@@ -30,19 +30,12 @@ int const MOD = 1e9 + 7;
 void solve(){
     int n, k;
     cin >> n >> k;
-    vi a(n);
+    vi a(n), b(n);
     vin(a);
-    
-    ll sumk = n*k;
-    ll sum = accumulate(all(a), 0);
+    vin(b);
 
-    //cout << sum << sp << sumk << sp;
     
-    if((sum % 2 == 0 and sumk % 2 ==0) or sum % 2 == 1){
-        YES;
-    } else {
-        NO;
-    }
+
 }
 
 int main(){
