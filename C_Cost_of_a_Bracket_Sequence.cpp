@@ -41,11 +41,13 @@ void solve(){
     vector<int> ans(n,0);
     vector<int> unnatural;
     vector<pair<int,int>> pairs;
+    int maxv = 0;
 
     stack<int> zero;
     for(int i=0; i<n; i++){
         if(a[i]==0){
             zero.push(i);
+            maxv++;
         } else{
             if(zero.empty()){
                 unnatural.push_back(i);
@@ -56,7 +58,13 @@ void solve(){
         }
     }
     
-   while(k--){
+  if(maxv>=(double)n/2){
+    for(auto i : ans){
+        cout << i;
+    }
+    cout << el;
+  } else{
+     while(k--){
     if(!unnatural.empty()){
         ans[unnatural.front()] = 1;
         unnatural.erase(unnatural.begin());
@@ -72,6 +80,7 @@ void solve(){
    }
    for(auto u : ans) cout << u;
     cout << el;
+  }
 }
 
 int main(){
