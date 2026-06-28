@@ -8,16 +8,12 @@ typedef long long ll;
 #define sp ' '
 
 void solve(){
-    ll n;
+    int n;
     cin >> n;
-    
-    ll a = n % 12;
-    if(a==10) a=22;
-    if(a<=n){
-        cout << a << sp << n - a << '\n';
-    }else {
-        cout << "-1\n";
-    }
+    vector<int> a(n);
+    vin(a);
+    sort(a.rbegin(),a.rend());
+    cout << a[0]+1-a[n-1] << endl;
 }
 
 int main(){

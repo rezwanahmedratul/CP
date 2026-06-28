@@ -10,14 +10,15 @@ typedef long long ll;
 void solve(){
     ll n;
     cin >> n;
-    
-    ll a = n % 12;
-    if(a==10) a=22;
-    if(a<=n){
-        cout << a << sp << n - a << '\n';
-    }else {
-        cout << "-1\n";
+    vector<int> a(n);
+    vin(a);
+    ll ans = 0;
+    int tmp=INT_MAX;
+    for(int i=0; i<n; i++){
+        tmp=min(a[i],tmp);
+        ans+=min(a[i],tmp);
     }
+    cout << ans << endl;
 }
 
 int main(){
